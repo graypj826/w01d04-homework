@@ -82,3 +82,25 @@ console.log(sumDigits(4000));
 
 
 //I'm getting a random 2
+
+// Pythagoras
+
+// Write a function calculateSide that takes two arguments: sideA and sideB, and returns the solution for sideC using the Pythagorean theorem.
+
+// hint: discover the Pythagorean Theorem on a website called google.com
+// hint: checkout the Math methods in javascript
+
+const calculateSide = (sideA, sideB) => {
+	let aSquared = Math.pow(sideA, 2);
+	console.log(aSquared)
+	let bSquared = Math.pow(sideB, 2);
+	console.log(bSquared)
+	let cSquared = aSquared + bSquared;
+	console.log(cSquared)
+	let cSide = Math.sqrt(cSquared);
+	console.log(cSide)
+	return `${sideA} squared times ${sideB} squared equals ${cSquared}, and c is ${cSide}.`
+}
+
+console.log(calculateSide(8,6));
+
