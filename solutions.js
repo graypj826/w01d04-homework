@@ -16,11 +16,11 @@ const checkPalindrome = (string1) =>{
 	for (let i = string1.length-1; i >= 0; i--){
 		stringToCompare.push(string1[i].toUpperCase())
 	} 
-	console.log(stringToCompare)
+	
 	for (let i = 0; i < string1.length; i++){
 		string1Array.push(string1[i].toUpperCase())
 	}
-	console.log(string1Array);
+	
 	for (let i = 0; i < string1.length; i++){
 	if (string1Array[i] !== stringToCompare [i]){ 
 		return "False";
@@ -31,3 +31,54 @@ const checkPalindrome = (string1) =>{
 }
 
 console.log(checkPalindrome("Radar"));
+
+console.log(checkPalindrome("Borscht"));
+
+// Digit Sum
+
+// Write a function sumDigits that accepts a number and returns the sum of its digits.
+
+// console.log(sumDigits(42));
+// => 6;
+
+const sumDigits = (num) =>{
+	let numStringArray =[];
+	let numIntArray = [];
+	let sumToDate = 0;
+
+	if(typeof num !== 'number'){
+		return "Try using a number?"
+	} else {
+
+	let numToString = num.toString();
+	let digitsInNum = numToString.length;
+
+	//push num as string to array
+
+		for (let i = 0; i < digitsInNum; i++){
+		numStringArray.push(numToString[i]);
+		}
+
+	console.log(numStringArray)
+
+	//push digits to array
+		for (let i = 0; i < digitsInNum; i++){
+		let numInt = 0
+		numInt = parseInt(numStringArray[i], 10);
+		numIntArray.push(numInt);
+		}
+	
+	console.log(numIntArray);
+	
+	//add together
+		for (let i = 0; i < digitsInNum; i++){
+			console.log(sumToDate += numIntArray[i])
+		}
+		return sumToDate;
+	}	
+}
+
+console.log(sumDigits(4000));
+
+
+//I'm getting a random 2
